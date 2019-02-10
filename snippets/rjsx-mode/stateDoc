@@ -1,0 +1,13 @@
+# key: stateDoc
+# name: stateDoc
+# --
+/**
+ * @typedef{${1:component}StateSubscription}
+ * @property - $0
+*/
+
+/**
+ * @function mapStateToProps
+ * @description State subscription for the $3
+ * @returns {$1StateSubscription} - $2
+*/

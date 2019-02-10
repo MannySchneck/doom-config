@@ -1,0 +1,4 @@
+# key: crange
+# name: crange
+# --
+std::cbegin(${1:collection}), std::cend($1)

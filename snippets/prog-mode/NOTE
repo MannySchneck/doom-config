@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: NOTE
+# key: NOTE
+# --
+NOTE(manny): $0
