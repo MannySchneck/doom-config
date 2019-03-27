@@ -11,6 +11,17 @@
 ;;
 (map! [remap evil-jump-to-tag] #'projectile-find-tag
       [remap find-tag]         #'projectile-find-tag
+      ;; Smartparens
+        :desc "up"                  :n "s-k" #'sp-up-sexp
+        :desc "down"                :n "s-j" #'sp-down-sexp
+        :desc "forward"             :n "s-l" #'sp-forward-sexp
+        :desc "back"                :n "s-h" #'sp-backward-sexp
+        :desc "slurp"               :n "s-s" #'sp-forward-slurp-sexp
+        :desc "barf"                :n "s-b" #'sp-forward-barf-sexp
+        :desc "slurp-back"          :n "s-S" #'sp-backward-slurp-sexp
+        :desc "barf-back"           :n "s-B" #'sp-backward-barf-sexp
+        :desc "wrap"                :n "s-w" #'sp-wrap-round
+        :desc "kill"                :n "s-d" #'sp-kill-sexp
 
       ;; Ensure there are no conflicts
       :nmvo doom-leader-key nil
@@ -521,23 +532,13 @@
       :desc "Universal argument"      :n "u"  #'universal-argument
       :desc "window"                  :n "w"  evil-window-map
 
-      ;; Smart Parens
-      (:desc "smartparens..."         :prefix "("
-        :desc "up"                  :n "k" #'sp-up-sexp
-        :desc "down"                :n "j" #'sp-down-sexp
-        :desc "forward"             :n "l" #'sp-forward-sexp
-        :desc "back"                :n "h" #'sp-backward-sexp
-        :desc "slurp"               :n "s" #'sp-forward-slurp-sexp
-        :desc "barf"                :n "b" #'sp-forward-barf-sexp
-        :desc "slurp-back"          :n "S" #'sp-backward-slurp-sexp
-        :desc "barf-back"           :n "B" #'sp-backward-barf-sexp
-        :desc "wrap"                :n "w" #'sp-wrap-round
-        :desc "kill"                :n "d" #'sp-kill-sexp)
+
+
 
       (:desc "previous..."         :prefix "["
         :desc "Text size"           :nv "[" #'text-scale-decrease
         :desc "Buffer"              :nv "b" #'previous-buffer
-        :desc "Diff Hunk"           :nv "d" #'git-gutter :previous-hunk
+        :desc "Diff Hunk"           :nv "d" #'git-gutter:previous-hunk
         :desc "Todo"                :nv "t" #'hl-todo-previous
         :desc "Error"               :nv "e" #'previous-error
         :desc "Workspace"           :nv "w" #'+workspace/switch-left

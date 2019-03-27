@@ -70,8 +70,13 @@
   (add-to-list 'org-capture-templates
                '("r" "Rant" entry
                  (file+headline "~/org/personal.org" "Rants")
-                 "* Rant"
+                 "* Rant\n%i\n"
                  )
+               )
+  (add-to-list 'org-capture-templates
+               '("mn" "Personal notes" entry
+                 (file+headline +org-capture-notes-file "Inbox")
+                 "* Note\n%i" :prepend t :kill-buffer t)
                )
   )
 
@@ -81,3 +86,5 @@
 (setq
  company-idle-delay nil
  company-minimum-prefix-length 1)
+
+(setq mac-option-modifier 'super)
