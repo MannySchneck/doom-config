@@ -233,7 +233,7 @@
           "o"       #'doom/window-enlargen
           "O"       #'doom/window-zoom
           ;; Delete window
-          "c"       #'+workspace/close-window-or-workspace
+          "d"       #'+workspace/close-window-or-workspace
           "C-C"     #'ace-delete-window))
 
       ;; evil-commentary
@@ -793,6 +793,7 @@
           :desc "Reload snippets"       :n  "r" #'yas-reload-all))
 
       (:desc "toggle" :prefix "t"
+        :desc "Company"                :n "c" #'company-mode
         :desc "Flyspell"               :n "s" #'flyspell-mode
         :desc "Flycheck"               :n "f" #'flycheck-mode
         :desc "Line numbers"           :n "l" #'doom/toggle-line-numbers
