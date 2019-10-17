@@ -7,11 +7,6 @@
   (setq avy-all-windows nil
         avy-background t))
 
-(def-package! org-jira
-  :config
-  (setq jiralib-url "https://encurate.atlassian.net/")
-  )
-
 (def-package! org-pomodoro
   :commands (org-pomodoro))
 (def-package! stylus-mode)
@@ -46,6 +41,7 @@
 (diminish 'company-box-mode)
 (diminish 'git-gutter-mode)
 (diminish 'ws-butler-mode)
+(diminish 'magit-mode)
 (diminish 'osx-clipboard-mode))))
 
 
@@ -87,10 +83,6 @@
 
 ;; core
 (add-hook 'before-save-hook #'whitespace-cleanup)
-
-(setq
-company-idle-delay nil
-company-minimum-prefix-length 1)
 
 (setq mac-option-modifier 'super)
 
