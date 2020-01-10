@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: why-do-this
+# key: whydothis
+# --
+We are doing $1
+Because we see the problem of $2
+We know it's a problem because $3
+If we don't fix it, we'll see $4
+We'll know we've fixed it when we get $5
+$0
