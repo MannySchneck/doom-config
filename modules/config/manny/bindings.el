@@ -9,7 +9,8 @@
 ;;
 
 (map! :leader
-      :desc "Pomodoro"                :nv "d"  #'org-pomodoro
-      :desc "Last project"            :nv "p`" #'+workspace/other
-      :desc "org-notes quick"         :nv "on" #'org-standup
-      )
+			:desc "Pomodoro"                :nv "d"  #'org-pomodoro
+			:desc "Last project"            :nv "p`" #'+workspace/other
+			:desc "org-notes quick"         :nv "on" #'org-standup
+			:desc "org-oncall quick"        :nv "oo" #'org-oncall
+			)
