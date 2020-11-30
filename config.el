@@ -9,7 +9,7 @@
 
 (defun org-standup ()
 	(interactive)
-	(find-file (expand-file-name "~/org/standup.org")))
+	(find-file (expand-file-name "~/org/notes.org")))
 (defun org-oncall ()
 	(interactive)
 	(find-file (expand-file-name "~/org/oncall.org")))
