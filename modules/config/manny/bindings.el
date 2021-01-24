@@ -9,8 +9,12 @@
 ;;
 
 (map! :leader
-			:desc "Pomodoro"                :nv "d"  #'org-pomodoro
-			:desc "Last project"            :nv "p`" #'+workspace/other
-			:desc "org-notes quick"         :nv "on" #'org-standup
-			:desc "org-oncall quick"        :nv "oo" #'org-oncall
-			)
+      :desc "Pomodoro"                :nv "d"  #'org-pomodoro
+      :desc "Last project"            :nv "p`" #'+workspace/other
+      :desc "org-notes quick"         :nv "on" #'org-standup
+      :desc "org-oncall quick"        :nv "oo" #'org-oncall
+      :desc "jira"                    :nv "oj" #'jira
+      )
+
+(map! :map (magit-mode-map)
+    :gr "C-S-i"    #'magit-section-cycle-diffs)

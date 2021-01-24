@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: nested-test
+# uuid: 9E6FB76E-93C0-4563-8C6D-5CDA1E4D14B3
+# key: nesttest
+# condition: t
+# --
+t.Run("NAME",
+	func (t *testing.T) {
+		t.Fail()
+	},
+)
