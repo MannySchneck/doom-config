@@ -16,8 +16,15 @@
 '("r" "Rant" entry
 (file+headline "~/org/personal.org" "Rants")
 "* Rant\n%i\n"
-)
-)
+))
+
+(after! company
+  (setq company-idle-delay 0) ; immediate
+  (setq company-minimum-prefix-length 2)
+  (set-company-backend! 'go-mode)
+  (set-company-backend! 'go-mode 'company-capf 'company-dabbrev))
+
+
 
 (after! lsp-mode
   (setq lsp-ui-sideline-enable nil))
@@ -59,7 +66,7 @@
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'meta)
 
-(load-theme 'zenburn t)
+(load-theme 'gruvbox-dark-soft t)
 
 ;; Turn off company for magit commits
 ;;
@@ -75,3 +82,19 @@
   (interactive)
   (let ((default-directory "~/cbio/repo"))
     (+ivy/project-search-from-cwd)))
+
+
+(defface diff-refine-removed
+  '((default
+     :inherit diff-refine-changed)
+    (((class color) (min-colors 257) (background light))
+     :background "#ffcccc")
+    (((class color) (min-colors 88) (background light))
+     :background "#ffbbbb")
+    (((class color) (min-colors 88) (background dark))
+     :background "#661111"))
+  "Face used for removed characters shown by `diff-refine-hunk'."
+  :version "24.3")
+
+
+(setq garbage-collection-messages t)

@@ -14,6 +14,7 @@
        :completion
        (company +tng)           ; the ultimate code completion backend
        ivy
+       :ui
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        nav-flash         ; blink the current line after jumping
@@ -73,7 +74,7 @@
         +pandoc          ; export-with-pandoc support
         +pomodoro        ; be fruitful with the tomato technique
         +present)        ; using org-mode for presentations
-       (python +lsp-python-ms)            ; beautiful is better than ugly
+       (python +lsp)            ; beautiful is better than ugly
        rest              ; Emacs as a REST client
        (ruby +rvm)              ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
@@ -84,6 +85,7 @@
         +wordnut         ; wordnet (wn) search
         +langtool)       ; a proofreader (grammar/style check) for Emacs
 
+       :config
        (default +bindings +smartparens)
 
        manny)

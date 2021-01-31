@@ -13,6 +13,9 @@
       :desc "Last project"            :nv "p`" #'+workspace/other
       :desc "org-notes quick"         :nv "on" #'org-standup
       :desc "org-oncall quick"        :nv "oo" #'org-oncall
+      (:when (featurep! :completion company)
+       (:prefix "C-x")
+         :i    "C-n" #'company-dabbrev)
       :desc "jira"                    :nv "oj" #'jira
       )
 
