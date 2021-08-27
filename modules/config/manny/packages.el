@@ -2,4 +2,5 @@
 ;;; private/manny/packages.el
 
 (package! org-pomodoro)
-(package! gruvbox-theme)
+(package! zenburn-theme)
+(package! org-jira)

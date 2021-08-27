@@ -16,12 +16,14 @@
        ivy
        :ui
        doom              ; what makes DOOM look the way it does
+       doom-dashboard    ; a nifty splash screen for Emacs
        nav-flash         ; blink the current line after jumping
        ophints           ; highlight the region an operation acts on
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
        vc-gutter         ; vcs diff in the fringe
+       vi-tilde-fringe   ; fringe tildes to mark beyond EOB
        window-select     ; visually switch windows
        workspaces        ; tab emulation, persistence & separate workspaces
 
@@ -54,23 +56,34 @@
 
        make              ; run make tasks from Emacs
        terraform         ; infrastructure as code
+       tmux              ; an API for interacting with tmux
+       upload            ; map local to remote projects via ssh/ftp
 
        :lang
-       (go +lsp)
        (yaml +lsp)              ; JSON, but readable
+       ;;cc                ; C/C++/Obj-C madness
+       ;;clojure           ; java with a lisp
        data              ; config/data formats
        emacs-lisp        ; drown in parentheses
+       (go +lsp)                ; the hipster dialect
        javascript        ; all(hope(abandon(ye(who(enter(here))))))
        markdown          ; writing docs for people to ignore
        (org              ; organize your plain life in plain text
+        +dragndrop       ; drag & drop files/images into org buffers
+        +ipython         ; ipython/jupyter support for babel
         +pandoc          ; export-with-pandoc support
         +pomodoro        ; be fruitful with the tomato technique
         +present)        ; using org-mode for presentations
-       (python +lsp)            ; beautiful is better than ugly
+       (python +lsp-python-ms)            ; beautiful is better than ugly
        rest              ; Emacs as a REST client
+       (ruby +rvm)              ; 1.step {|i| p "Ruby is #{i.even? ? 'love' : 'life'}"}
        rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        sh                ; she sells {ba,z,fi}sh shells on the C xor
 
+       :app
+       (write            ; emacs for writers (fiction, notes, papers, etc.)
+        +wordnut         ; wordnet (wn) search
+        +langtool)       ; a proofreader (grammar/style check) for Emacs
 
        :config
        (default +bindings +smartparens)
